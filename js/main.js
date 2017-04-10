@@ -11,3 +11,5 @@ $("#lightgallery").lightGallery({
 $('#search').hideseek({
   nodata: 'No Results Found',
 });
+
+/*   API Integration   */
