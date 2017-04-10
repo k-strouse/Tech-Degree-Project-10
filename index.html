@@ -7,7 +7,6 @@
     <link type="text/css" rel="stylesheet" href="js/lightGallery/css/lightgallery.min.css">
     <link type="text/css" rel="stylesheet" href="js/lightGallery/css/lg-transitions.min.css">
     <link rel="stylesheet" href="css/main.css">
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
@@ -15,14 +14,18 @@
         <div class="title">
           <h1>Some of my Favorite Albums</h1>
         </div>
-        <div class="search-input">
-          <input id="search" name="search" placeholder="Filter Photos" type="text" data-list="#lightgallery">
-        </div>
+            <form class="search-input">
+                <input type="search" name="search" id="search" placeholder="Type an Artist's Name">
+                <input type="submit" value="Search" id="submit">
+            </form>
         <div class="container">
           <ul id="lightgallery" class="gallery">
-            <li data-src="img/01.jpg" data-sub-html="#caption01" class='thumb1'>
-                <img class="thumbnails" src="img/Thumbnails/01.jpg" alt="Hay Bales">
-                <span class="caption" id="caption01">I love hay bales. Took this snap on a drive through the countryside past some straw fields.</span>
+           <!--
+
+
+            <li class='thumb1' data-src="https://i.scdn.co/image/06ed478c89f07a5e9daf7a59ec1c556a81952cd1" data-sub-html="#caption01">
+                <img class="thumbnails" src="https://i.scdn.co/image/7fd066f5b13541b18a6b069b21cd64a66491833f" alt="cover" data-sub-html="#caption01">
+                <span class="caption" id="caption01">1</span>
             </li>
             <li data-src="img/02.jpg" data-sub-html="#caption02">
                 <img class="thumbnails" src="img/Thumbnails/02.jpg" alt="Lake">
@@ -68,10 +71,13 @@
                 <img class="thumbnails" src="img/Thumbnails/12.jpg" alt="Bluebells">
                 <span class="caption" id="caption12">I walked through this meadow of bluebells and got a good view of the snow on the mountain before the fog came in.</span>
             </li>
+
+          -->
+
           </ul>
         </div>
     </div>
-    <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="js/lightGallery/js/lightgallery.min.js"></script>
     <script src="js/lightGallery/js/lg-fullscreen.min.js"></script>
     <script src="js/lightGallery/js/lg-thumbnail.min.js"></script>
