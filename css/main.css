@@ -1,0 +1,83 @@
+/*   Global styles   */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/*   Gallery layout  */
+
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.gallery {
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding: 0;
+  text-align: center;
+  display: block;
+  list-style-type: none;
+  cursor: pointer;
+}
+
+.gallery li:nth-child(4n+1) {
+  margin-left: 0;
+}
+
+.gallery li:nth-child(4n+4) {
+  margin-right: 0;
+}
+
+.gallery li {
+  float: left;
+  margin: 30px;
+}
+
+.gallery li:nth-child(4n+4) {
+  clear: right;
+}
+
+/*   Hide span/caption element   */
+.caption {
+  display: none;
+  text-align: center;
+}
+
+/*   Search styles   */
+#search {
+  width: 460px;
+  border-radius: 5px;
+  font-size: 16pt;
+}
+
+.search-input {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.no-results {
+  display: none;
+}
+
+/*   lightGallery Plugin user styles   */
+
+.lg-toolbar.group {
+    display: none;
+}
+
+.lg-backdrop.in {
+  opacity: .5;
+}
+
+.lg-sub-html {
+  width: 40%;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  background-color: black;
+  border-radius: 20px;
+}
