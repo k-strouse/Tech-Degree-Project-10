@@ -25,21 +25,15 @@ body {
   cursor: pointer;
 }
 
-.gallery li:nth-child(4n+1) {
-  margin-left: 0;
-}
-
-.gallery li:nth-child(4n+4) {
-  margin-right: 0;
+.gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .gallery li {
-  float: left;
   margin: 30px;
-}
-
-.gallery li:nth-child(4n+4) {
-  clear: right;
 }
 
 /*   Hide span/caption element   */
@@ -53,6 +47,7 @@ body {
   width: 460px;
   border-radius: 5px;
   font-size: 16pt;
+  display: none;
 }
 
 .search-input {
