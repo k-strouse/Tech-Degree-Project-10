@@ -29,9 +29,9 @@ $(document).ready(function() {
         albumID.push(data.albums.items[i].id);
         //albumHTML += '<li data-src="' + data.albums.items[i].images[0].url + '" class="thumb1 image">';
         albumHTML += '<a href="' + data.albums.items[i].images[0].url + '" class="image">';
-        albumHTML += '<img src="' + data.albums.items[i].images[1].url + '" class="thumbnails" /></a>';
+        albumHTML += '<img src="' + data.albums.items[i].images[1].url + '" class="thumbnails"></a>';
       });
-      albumHTML += "</div>";
+      albumHTML += '</div>'
       $('#lightBoxDiv').html(albumHTML);      
     }
    $.getJSON(spotifySearchAPI, albumData, displayAlbums);
@@ -46,11 +46,14 @@ console.log(albumID);
 
 
 /*   Call lightGallery Plugin   */
-$("#lightGallery").lightGallery({
-  height: '400px',
-  download: false,
-  thumbnail: false,
-  counter: false,
-  mode: 'lg-lollipop',
+$(document).ajaxComplete(function () {    //This code requires all Ajax requests to be completed before the lightGallery plugin can work
+
+    $("#lightGallery").lightGallery({
+    height: '400px',
+    download: false,
+    thumbnail: false,
+    counter: false,
+    mode: 'lg-lollipop',
+  });
 });
 

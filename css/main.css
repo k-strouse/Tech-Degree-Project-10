@@ -15,8 +15,22 @@ ul {
 
 /*   Gallery layout  */
 
+.image {
+  padding: 20px;
+  margin: 20px;
+  background-color: black;
+  border-radius: 5px;
+}
+
+.thumbnails {
+  height: auto; 
+  width: auto; 
+  max-width: 200px; 
+  max-height: 200px;
+}
+
 .container {
-  max-width: 1080px;
+  max-width: 1280px;
   margin: 0 auto;
 }
 
