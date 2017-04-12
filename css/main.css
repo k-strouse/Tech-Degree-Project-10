@@ -102,8 +102,12 @@ ul {
 
 .title {
   border-bottom: 2px solid black;
-  width: 980px;
+  width: 1080px;
   margin: 0 auto;
+}
+
+#lightGallery a div {
+  display: none;
 }
 
 /*   Media Queries   */
@@ -120,11 +124,30 @@ ul {
   #search {
     width: 460px;
   }
+  .thumbnails {
+  height: auto; 
+  width: auto; 
+  max-width: 150px; 
+  max-height: 150px;
+  }
 }
 
 @media (max-width: 375px) {
   .title,
   #search {
     width: 200px;
+    display: block;
+    margin: 0 auto;
+  }
+  .search-input {
+    display: block;
+  }
+  .lg-sub-html {
+    font-size: 10px;
+    margin-bottom: 10px;
+    width: 80%;
+  }
+  #submit {
+    margin-top: 10px;
   }
 }
