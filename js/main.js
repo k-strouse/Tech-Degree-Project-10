@@ -28,16 +28,16 @@ $(document).ready(function() {
         albumID.push(data.albums.items[i].id);
         //albumHTML += '<li data-src="' + data.albums.items[i].images[0].url + '" class="thumb1 image">';
         var captions = (i);
-        albumHTML += '<a href="' + data.albums.items[i].images[0].url + '" class="image" data-sub-html="#captions' + captions + '">';
-        albumHTML += '<img src="' + data.albums.items[i].images[1].url + '" class="thumbnails"/>';
+        albumHTML += '<a href="' + data.albums.items[i].images[0].url + '" class="image" data-sub-html="#captions' + captions + '">'; //Add album images for the lightbox & add class for captions
+        albumHTML += '<img src="' + data.albums.items[i].images[1].url + '" class="thumbnails"/>'; //Album thumbnails
         albumHTML += '<div id="captions' + captions + '"><h2>Artist: ' + data.albums.items[i].artists[0].name + 
-        '</h2><h3>Title: ' + data.albums.items[i].name + '</h3>';
+        '</h2><h3>Album Title: ' + data.albums.items[i].name + '</h3>';  //These 2 lines of code add the div necessary for lightbox captions, the div has been removed in CSS styling
         albumHTML += '</div></a>';        
       });
-      albumHTML += '</div>'
-      $('#lightBoxDiv').html(albumHTML);      
+      albumHTML += '</div>';
+      $('#lightBoxDiv').html(albumHTML);  //Add the albumHTML to the appropriate div
     }
-   $.getJSON(spotifySearchAPI, albumData, displayAlbums);
+   $.getJSON(spotifySearchAPI, albumData, displayAlbums);  //AJAX request
     $searchField.prop("disabled",false);
     $submitButton.attr("disabled",false).val("Search");	
 console.log(albumID);
