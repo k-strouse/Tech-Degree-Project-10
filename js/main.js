@@ -1,9 +1,4 @@
 
-/*   Call hideSeek Plugin   */
-$('#search').hideseek({
-  nodata: 'No Results Found',
-});
-
 /*   API Integration   */
 
 $(document).ready(function() {
@@ -21,18 +16,21 @@ $(document).ready(function() {
       type: 'album'
     };
     var albumID = new Array;  //blank album ID array
-    var spotifyAlbumAPI = '"https://api.spotify.com/v1/albums/" + albumId';
+    //var spotifyAlbumAPI = '"https://api.spotify.com/v1/albums/' + albumID[i] + '"';
     function displayAlbums(data) {                           //Function that gets all of the various album ID's associated with an artist the user has queried
       var albumHTML = '<div id="lightGallery" class="gallery">';
       $.each(data.albums.items,function(i,albums) {
         albumID.push(data.albums.items[i].id);
         //albumHTML += '<li data-src="' + data.albums.items[i].images[0].url + '" class="thumb1 image">';
         var captions = (i);
+        var spotifyAlbumAPI = '"https://api.spotify.com/v1/albums/' + albumID[i] + '"';
         albumHTML += '<a href="' + data.albums.items[i].images[0].url + '" class="image" data-sub-html="#captions' + captions + '">'; //Add album images for the lightbox & add class for captions
         albumHTML += '<img src="' + data.albums.items[i].images[1].url + '" class="thumbnails"/>'; //Album thumbnails
         albumHTML += '<div id="captions' + captions + '"><h2>Artist: ' + data.albums.items[i].artists[0].name + 
         '</h2><h3>Album Title: ' + data.albums.items[i].name + '</h3>';  //These 2 lines of code add the div necessary for lightbox captions, the div has been removed in CSS styling
-        albumHTML += '</div></a>';        
+        albumHTML += '</div></a>';
+        console.log(spotifyAlbumAPI);
+        //$.getJSON(spotifyAlbumAPI,  )        <p>Release Date: ' + data.release_date + '</p>
       });
       albumHTML += '</div>';
       $('#lightBoxDiv').html(albumHTML);  //Add the albumHTML to the appropriate div
