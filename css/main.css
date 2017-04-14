@@ -96,7 +96,7 @@ ul {
   width: 40%;
   margin: 0 auto;
   margin-bottom: 30px;
-  background-color: #4F4C4C;
+  background-color: rgba(0, 0, 0, 0.45);
   border-radius: 20px;
 }
 
