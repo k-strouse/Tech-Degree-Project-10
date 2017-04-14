@@ -35,10 +35,20 @@ $(document).ready(function() {
       albumHTML += '</div>';
       $('#lightBoxDiv').html(albumHTML);
       
-      
+
+
+
       for (x = 0; x < spotifyAlbumAPIarray.length; x++) {  
-        $.getJSON(spotifyAlbumAPIarray[x]);
-        $("#captions").append('<h1>Artist:"' + data.album_type + '"</h1>');     //data.albums.items[i].images[0].url
+        $.getJSON(spotifyAlbumAPIarray[x], getAlbumData);
+        //$("#captions").append('<h1>Artist:"' + data.album_type + '"</h1>');     data.albums.items[i].images[0].url
+      }
+
+      function getAlbumData(data) {
+        $.each(data.tracks.items,function(i,tracks) {
+          var captions = (i);
+         $('#captions' + captions + '').append('<p>Tracks: ' + data.tracks.items[i].name + '</p>');
+          console.log(data.tracks.items[i].name);
+        });
       }
       
     }
