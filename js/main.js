@@ -1,4 +1,3 @@
-
 /*   API Integration   */
 
 $(document).ready(function() {
@@ -23,7 +22,6 @@ $(document).ready(function() {
       $.each(data.albums.items,function(i,albums) {
         albumID.push(data.albums.items[i].id);
         var captions = (i);
-        var spotifyAlbumAPI = '"https://api.spotify.com/v1/albums/' + albumID[i] + '"';
         albumHTML += '<a href="' + data.albums.items[i].images[0].url + '" class="image" data-sub-html="#captions' + captions + '">'; //Add album images for the lightbox & add class for captions
         albumHTML += '<img src="' + data.albums.items[i].images[1].url + '" class="thumbnails"/>'; //Album thumbnails
         albumHTML += '<div id="captions' + captions + '"><h2>Artist: ' + data.albums.items[i].artists[0].name + 
