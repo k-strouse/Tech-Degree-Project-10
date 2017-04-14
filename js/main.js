@@ -56,6 +56,8 @@ console.log (spotifyAlbumAPIarray);
 /*   Call lightGallery Plugin   */
 $(document).ajaxComplete(function () {    //This code requires all Ajax requests to be completed before the lightGallery plugin can work
     $("#lightGallery").lightGallery({
+    download: false,
+    thumbnail: false,
     mode: 'lg-lollipop',
   });
 });
